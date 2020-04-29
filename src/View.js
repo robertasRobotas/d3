@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React, { useEffect } from 'react';
 import * as THREE from 'three';
-class View extends Component {
-  componentDidMount() {
+const View = () => {
+  useEffect(() => {
     // === THREE.JS CODE START ===
     var scene = new THREE.Scene();
     var camera = new THREE.PerspectiveCamera(
@@ -26,9 +26,7 @@ class View extends Component {
     };
     animate();
     // === THREE.JS EXAMPLE CODE END ===
-  }
-  render() {
-    return <div />;
-  }
-}
+  }, []);
+  return <></>;
+};
 export default View;
